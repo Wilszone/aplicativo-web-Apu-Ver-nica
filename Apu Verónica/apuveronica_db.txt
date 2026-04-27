@@ -1,0 +1,67 @@
+-- Base de datos: apuveronica_db
+CREATE DATABASE IF NOT EXISTS apuveronica_db
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE apuveronica_db;
+
+-- Tabla: usuarios
+CREATE TABLE IF NOT EXISTS usuarios (
+  id        INT          AUTO_INCREMENT PRIMARY KEY,
+  nombre    VARCHAR(100) NOT NULL,
+  email     VARCHAR(100) NOT NULL UNIQUE,
+  password  VARCHAR(255) NOT NULL,
+  rol       ENUM('admin','staff') DEFAULT 'staff',
+  created   DATETIME     DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabla: menú
+CREATE TABLE IF NOT EXISTS menu (
+  id          INT           AUTO_INCREMENT PRIMARY KEY,
+  categoria   VARCHAR(50)   NOT NULL,
+  nombre      VARCHAR(100)  NOT NULL,
+  descripcion TEXT,
+  precio      DECIMAL(8,2)  NOT NULL,
+  imagen      VARCHAR(200),
+  activo      TINYINT(1)    DEFAULT 1
+);
+
+-- Tabla: reservas
+CREATE TABLE IF NOT EXISTS reservas (
+  id        INT          AUTO_INCREMENT PRIMARY KEY,
+  cliente   VARCHAR(100) NOT NULL,
+  email     VARCHAR(100) NOT NULL,
+  telefono  VARCHAR(20),
+  fecha     DATE         NOT NULL,
+  hora      TIME         NOT NULL,
+  personas  INT          NOT NULL DEFAULT 1,
+  estado    ENUM('pendiente','confirmada','cancelada') DEFAULT 'pendiente',
+  created   DATETIME     DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabla: galería
+CREATE TABLE IF NOT EXISTS galeria (
+  id      INT          AUTO_INCREMENT PRIMARY KEY,
+  titulo  VARCHAR(100),
+  archivo VARCHAR(200) NOT NULL,
+  orden   INT          DEFAULT 0,
+  activo  TINYINT(1)   DEFAULT 1
+);
+
+-- Usuario admin por defecto (password: Admin123*)
+INSERT INTO usuarios (nombre, email, password, rol)
+VALUES (
+  'Administrador',
+  'admin@apuveronica.pe',
+  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+  'admin'
+);
+
+-- Datos iniciales del menú
+INSERT INTO menu (categoria, nombre, descripcion, precio) VALUES
+('Entradas',        'Ceviche de trucha',     'Trucha fresca con leche de tigre andina',      28.00),
+('Entradas',        'Hummus andino',          'Garbanzo local con hierbas y vegetales',        18.00),
+('Platos principales','Trucha a la parrilla','Trucha del Vilcanota con papas nativas',         42.00),
+('Platos principales','Anticucho de alpaca', 'Anticuchos en piedra volcánica con chimichurri', 45.00),
+('Bebidas',         'Chicha morada',          'Maíz morado artesanal con especias',             8.00),
+('Bebidas',         'Pale Ale artesanal',     'Cerveza de maracuyá elaborada en casa',          14.00),
+('Postres',         'Mousse de lúcuma',       'Postre cremoso con lúcuma peruana',              12.00);
