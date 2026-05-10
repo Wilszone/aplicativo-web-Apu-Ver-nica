@@ -1,0 +1,19 @@
+{
+  "nav.carta"      : "Carta",
+  "nav.galeria"    : "Galería",
+  "nav.nosotros"   : "Nosotros",
+  "nav.contacto"   : "Contacto",
+  "nav.reservar"   : "Reservar Mesa",
+  "hero.titulo"    : "Sabores Auténticos del Valle Sagrado",
+  "hero.subtitulo" : "Gastronomía peruana y andina en el corazón de Ollantaytambo",
+  "hero.btn_carta" : "Ver Carta",
+  "hero.btn_reservar" : "Reservar Mesa",
+  "carta.titulo"   : "Nuestra Carta",
+  "carta.todas"    : "Todas",
+  "carta.entradas" : "Entradas",
+  "carta.principales" : "Platos Principales",
+  "carta.bebidas"  : "Bebidas",
+  "carta.postres"  : "Postres",
+  "reservas.titulo": "Reservar Mesa",
+  "reservas.btn"   : "Confirmar Reserva"
+}

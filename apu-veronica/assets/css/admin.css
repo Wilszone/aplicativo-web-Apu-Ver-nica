@@ -1,0 +1,48 @@
+/* ── SIDEBAR ────────────────────────────────────────────────────────────── */
+.sidebar .nav-link {
+  border-radius: 6px;
+  padding: .5rem .75rem;
+  font-size: .9rem;
+  transition: background .2s;
+}
+.sidebar .nav-link:hover {
+  background: rgba(255,255,255,.08);
+}
+.sidebar .nav-link.text-white {
+  background: rgba(255,255,255,.12);
+  font-weight: 600;
+}
+
+/* ── TARJETAS ESTADÍSTICAS ──────────────────────────────────────────────── */
+.card {
+  border-radius: 10px;
+}
+
+/* ── TABLA ──────────────────────────────────────────────────────────────── */
+.table th {
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.table td {
+  font-size: .875rem;
+  vertical-align: middle;
+}
+
+/* ── BADGE ESTADO ───────────────────────────────────────────────────────── */
+.badge {
+  font-size: .75rem;
+  padding: .35em .65em;
+}
+
+/* ── MAIN CONTENT ───────────────────────────────────────────────────────── */
+main {
+  min-height: 100vh;
+}
+
+/* ── MODAL ──────────────────────────────────────────────────────────────── */
+.modal-header.bg-dark .modal-title {
+  font-size: 1rem;
+  font-weight: 600;
+}

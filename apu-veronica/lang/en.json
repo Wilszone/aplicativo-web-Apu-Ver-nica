@@ -1,0 +1,19 @@
+{
+  "nav.carta"      : "Menu",
+  "nav.galeria"    : "Gallery",
+  "nav.nosotros"   : "About Us",
+  "nav.contacto"   : "Contact",
+  "nav.reservar"   : "Book a Table",
+  "hero.titulo"    : "Authentic Flavors of the Sacred Valley",
+  "hero.subtitulo" : "Peruvian and Andean cuisine in the heart of Ollantaytambo",
+  "hero.btn_carta" : "View Menu",
+  "hero.btn_reservar" : "Book a Table",
+  "carta.titulo"   : "Our Menu",
+  "carta.todas"    : "All",
+  "carta.entradas" : "Starters",
+  "carta.principales" : "Main Courses",
+  "carta.bebidas"  : "Drinks",
+  "carta.postres"  : "Desserts",
+  "reservas.titulo": "Book a Table",
+  "reservas.btn"   : "Confirm Reservation"
+}
